@@ -1,0 +1,1 @@
+<h1 class="ml-5">Toi ten <?php echo $name ?>, tuoi : <?php echo $age ?></h1>
