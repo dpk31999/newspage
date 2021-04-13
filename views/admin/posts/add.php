@@ -1,4 +1,4 @@
-<a href="/newspage/admin/post" class="btn btn-default">
+<a href="<?=$domain?>/admin/post" class="btn btn-default">
     <span class="glyphicon glyphicon-arrow-left"></span> Trở về
 </a>
 <p class="from-add-post">

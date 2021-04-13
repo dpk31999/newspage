@@ -1,4 +1,4 @@
-<a href="/newspage/admin/category" class="btn btn-primary">
+<a href="<?=$domain?>/admin/category" class="btn btn-primary">
     <span class="glyphicon glyphicon-arrow-left"></span> Trở về
 </a> 
 <p class="form-edit-cate">

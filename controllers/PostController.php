@@ -20,9 +20,12 @@ class PostController extends BaseController
 
   public function show()
   {
-    $post = Post::find($_GET['p2']);
+    $post = Post::findBySlug($_GET['p2']);
+    $categories = Category::all();
 
-    $data = array('post' => $post);
-    $this->view('posts/show',$data);
+    $this->view('posts/show',[
+      'post' => $post,
+      'categories' => $categories
+    ]);
   }
 }

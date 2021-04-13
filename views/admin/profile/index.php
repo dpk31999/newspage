@@ -5,7 +5,7 @@
         <form action="profile/editavatar" method = "POST" enctype="multipart/form-data">
             <div class="form-group box-current-img">
                 <p><strong>Ảnh hiện tại</strong></p>
-                <img src="/newspage/storage/<?=$user->url_avatar?>" alt = "Ảnh hiện tại của <?=$user->name?>" width="80" height="80">
+                <img src="<?=$domain?>/storage/<?=$user->url_avatar?>" alt = "Ảnh hiện tại của <?=$user->name?>" width="80" height="80">
             </div>
             <div class= "alert alert-info">Vui lòng chọn ảnh có đuôi .jpg .png .gif và có dung lượng dưới 5MB.</div>
             <div class="form-group">

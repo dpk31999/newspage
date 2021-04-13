@@ -21,20 +21,13 @@ if (isset($_GET['p1'])) {
       $action = 'index';
     }
 
-
     require_once('routesAdmin.php');
   }
   else{
     $controller = $_GET['p1'];
     if (isset($_GET['p2'])) {
-      if(is_numeric($_GET['p2']))
-      {
-        $action = 'show';
-        $id = $_GET['p2'];
-      }
-      else{
-        $action = $_GET['p2'];
-      }
+      $action = 'show';
+      $slug = $_GET['p2'];
     } 
     else {
       $action = 'index';

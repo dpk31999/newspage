@@ -30,7 +30,7 @@ class PostController extends BaseController
 
             Post::create($_POST['title'],$_POST['desc'],$url_thumb,$_POST['slug'],$_POST['keywords'],$_POST['body'],$_POST['cate'],$this->user->id,$_POST['status'],0,$this->date_current);
 
-            header('Location: http://localhost/newspage/admin/post');
+            header('Location: '. $this->domain .'/admin/post');
         }
         
         else{
@@ -47,7 +47,7 @@ class PostController extends BaseController
         $id = $_GET['p4'];
         if(isset($_POST['status']) && isset($_POST['title']))
         {
-            if(isset($_FILES['img_up']))
+            if($_FILES['img_up']['name'] != '')
             {
                 $dir = '/newspage/storage/uploads/';
                 $name_img = stripslashes($_FILES['img_up']['name']);
@@ -66,7 +66,7 @@ class PostController extends BaseController
 
             Post::save($id,$_POST['title'],$_POST['desc'],$url_thumb,$_POST['slug'],$_POST['keywords'],$_POST['body'],$_POST['cate'],$_POST['status']);
 
-            header('Location: http://localhost/newspage/admin/post');
+            header('Location: '. $this->domain .'/admin/post');
         }
 
         else{

@@ -107,4 +107,22 @@ class Category
 
         return $list;
     }
+
+    public function haha()
+    {
+        echo 'haha';
+    }
+
+    static function findBySlug($slug)
+    {
+        $db = DB::getInstance();
+
+        $req = $db->query("SELECT * FROM categories WHERE url = '$slug'");
+
+        $item = $req->fetch();
+
+        $result = new Category($item['id_cate'], $item['label'],$item['url'],$item['date_created']);
+        
+        return $result;
+    }
 }

@@ -15,9 +15,9 @@ class Post
   public $account;
   public $status;
   public $view;
-  public $date_creared;
+  public $date_created;
 
-  function __construct($id, $title,$descr,$url_thumb,$slug,$body,$category,$account,$status,$view,$date_creared)
+  function __construct($id, $title,$descr,$url_thumb,$slug,$body,$category,$account,$status,$view,$date_created)
   {
     $this->id = $id;
     $this->title = $title;
@@ -29,7 +29,7 @@ class Post
     $this->account = $account;
     $this->status = $status;
     $this->view = $view;
-    $this->date_creared = $date_creared;
+    $this->date_created = $date_created;
   }
 
   static function all()
@@ -156,5 +156,18 @@ class Post
       }
   
       return $list;
+    }
+
+    static function findBySlug($slug)
+    {
+      $db = DB::getInstance();
+
+      $req = $db->query("SELECT * FROM posts WHERE slug = '$slug'");
+
+      $item = $req->fetch();
+
+      $result = new Post($item['id'], $item['title'],$item['descr'],$item['url_thumb'],$item['slug'],$item['body'],Category::find($item['cate_id']),Account::find($item['author_id']),$item['status'],$item['view'],$item['date_created']);
+      
+      return $result;
     }
 }

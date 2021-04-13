@@ -1,5 +1,6 @@
 <?php
 
+require_once('models/Category.php');
 include_once('models/User.php');
 
 class BaseController
@@ -7,6 +8,7 @@ class BaseController
   
   public $date_current;
   public $user;
+  public $domain = 'http://localhost/newspage';
 
   function __construct()
   {
@@ -22,6 +24,8 @@ class BaseController
   function view($file, $data = array())
   {
     $view_file = 'views/' . $file . '.php';  
+    $categories = Category::all();
+    $domain = $this->domain;
 
     if (is_file($view_file)) {
       // Nếu tồn tại file đó thì tạo ra các biến chứa giá trị truyền vào lúc gọi hàm
@@ -51,7 +55,7 @@ class BaseController
       }
     } else {
       // Nếu file muốn gọi ra không tồn tại thì chuyển hướng đến trang báo lỗi.
-      header('Location: http://localhost/newspage/page/error');
+      header('Location: '. $this->domain .'/page/error');
     }
   }
 }

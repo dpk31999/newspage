@@ -3,6 +3,7 @@ require_once('controllers/BaseController.php');
 
 $controllers = array(
   'page' => ['index', 'error'],
+  'category' => ['show'],
   'post' => ['index','show'],
   'home' => ['index']
 ); // Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.

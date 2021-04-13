@@ -34,7 +34,7 @@ class ProfileController extends BaseController
                 $_SESSION['error'] = 'errorAvt';
             }
 
-            header('Location: http://localhost/newspage/admin/profile');
+            header('Location: '. $this->domain .'/admin/profile');
         }
     }
 
@@ -49,7 +49,7 @@ class ProfileController extends BaseController
         {
             $_SESSION['error'] = 'errorInfo';
         }
-        header('Location: http://localhost/newspage/admin/profile');
+        header('Location: '. $this->domain .'/admin/profile');
     }
 
     public function editpassword()
@@ -75,6 +75,6 @@ class ProfileController extends BaseController
             }
         }
 
-        header('Location: http://localhost/newspage/admin/profile');
+        header('Location: '. $this->domain .'/admin/profile');
     }
 }

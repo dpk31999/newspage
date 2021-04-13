@@ -28,7 +28,7 @@
             <li class="list-group-item">
               <div class="media">
                 <a class="pull-left">
-                    <img class="media-object" src="/newspage/storage/<?=$user->url_avatar?>" alt="Ảnh đại diện của" width="64" height="64">
+                    <img class="media-object" src="<?=$domain?>/storage/<?=$user->url_avatar?>" alt="Ảnh đại diện của" width="64" height="64">
                 </a>
                 <div class="media-body">
                   <h4 class="media-heading"><?php echo $user->username ?></h4>
@@ -47,16 +47,16 @@
                 </div>
               </div>
             </li>
-            <a class="list-group-item text-decoration-none <?php if(!isset($_GET['p2'])) echo 'active'; ?>" href="/newspage/admin">
+            <a class="list-group-item text-decoration-none <?php if(!isset($_GET['p2'])) echo 'active'; ?>" href="<?=$domain?>/admin">
               <span class="glyphicon glyphicon-dashboard"></span> Bảng điều khiển
             </a>
-            <a class="list-group-item text-decoration-none <?php if(isset($_GET['p2']) && $_GET['p2'] == 'profile') echo 'active'; ?>" href="/newspage/admin/profile">
+            <a class="list-group-item text-decoration-none <?php if(isset($_GET['p2']) && $_GET['p2'] == 'profile') echo 'active'; ?>" href="<?=$domain?>/admin/profile">
               <span class="glyphicon glyphicon-user"></span> Hồ sơ cá nhân
             </a>
-            <a class="list-group-item text-decoration-none <?php if(isset($_GET['p2']) && $_GET['p2'] == 'post') echo 'active'; ?>" href="/newspage/admin/post">
+            <a class="list-group-item text-decoration-none <?php if(isset($_GET['p2']) && $_GET['p2'] == 'post') echo 'active'; ?>" href="<?=$domain?>/admin/post">
               <span class="glyphicon glyphicon-edit"></span> Bài viết
             </a>
-            <a class="list-group-item text-decoration-none <?php if(isset($_GET['p2']) && $_GET['p2'] == 'account') echo 'active'; ?>" href="/newspage/admin/account">
+            <a class="list-group-item text-decoration-none <?php if(isset($_GET['p2']) && $_GET['p2'] == 'account') echo 'active'; ?>" href="<?=$domain?>/admin/account">
               <span class="glyphicon glyphicon-lock"></span> Tài khoản
             </a>
             <?php
@@ -64,14 +64,14 @@
             {
               echo 
               '	
-                <a class="list-group-item text-decoration-none '; if(isset($_GET['p2']) && $_GET['p2'] == 'category') echo 'active'; echo '" href="/newspage/admin/category">
+                <a class="list-group-item text-decoration-none '; if(isset($_GET['p2']) && $_GET['p2'] == 'category') echo 'active'; echo '" href="'. $domain .'/admin/category">
                   <span class="glyphicon glyphicon-tag"></span> Chuyên mục
                 </a>
               ';
             }
 
             ?>
-            <a class="list-group-item text-decoration-none" href="/newspage/admin/logout">
+            <a class="list-group-item text-decoration-none" href="<?=$domain?>/admin/logout">
               <span class="glyphicon glyphicon-off"></span> Thoát
             </a>
           </ul>
@@ -84,9 +84,9 @@
 
 
 
-  <script src="/newspage/asset/js/jquery.min.js"></script>
-  <script src="/newspage/asset/js/form.js"></script>	    
-  <script src="/newspage/asset/ckeditor/ckeditor.js"></script>	  
+  <script src="<?=$domain?>/asset/js/jquery.min.js"></script>
+  <script src="<?=$domain?>/asset/js/form.js"></script>	    
+  <script src="<?=$domain?>/asset/ckeditor/ckeditor.js"></script>	  
   <script>
       config = {};
       config.entities_latin = false;

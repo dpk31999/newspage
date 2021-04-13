@@ -8,7 +8,7 @@ class LoginController extends BaseController
     {
         if(isset($_SESSION['user']))
         {
-            header('Location: http://localhost/newspage/admin');
+            header('Location: '. $this->domain .'/admin');
         }
         if(isset($_POST['user_signin']) && isset($_POST['pass_signin']))
         {
@@ -23,7 +23,7 @@ class LoginController extends BaseController
                 {
                     $session = new Session();
                     $session->send($_POST['user_signin']);
-                    header('Location: http://localhost/newspage/admin');
+                    header('Location: '. $this->domain .'/admin');
                 }
                 else{
                     $this->view('admin/auth/login',[

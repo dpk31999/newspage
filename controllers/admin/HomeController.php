@@ -29,7 +29,7 @@ class HomeController extends BaseController
             ]);
         }
         else{
-            header('Location: http://localhost/newspage/admin/login');
+            header('Location: '. $this->domain .'/admin/login');
         }
     }
 

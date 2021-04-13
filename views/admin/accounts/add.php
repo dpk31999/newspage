@@ -1,4 +1,4 @@
-<a href="newspage/admin/account" class="btn btn-default">
+<a href="<?=$domain?>/admin/account" class="btn btn-default">
     <span class="glyphicon glyphicon-arrow-left"></span> Trở về
 </a>
 <form method="POST" action="add">

@@ -9,9 +9,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/> 
 
 	<!-- Liên kết thư viện jQuery -->
-	<script src="/newspage/asset/js/jquery.min.js"></script>
-    <script src="/newspage/asset/js/form.js"></script>	    
-    <script src="/newspage/asset/ckeditor/ckeditor.js"></script>	  
+	<script src="<?=$domain?>/asset/js/jquery.min.js"></script>
+    <script src="<?=$domain?>/asset/js/form.js"></script>	    
+    <script src="<?=$domain?>/asset/ckeditor/ckeditor.js"></script>	  
 </head>
 <body>
 

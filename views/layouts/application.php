@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h2><a href="/newspage" class="text-decoration-none">Thời báo 247</a></h2>
+                <h2><a href="<?=$domain?>" class="text-decoration-none">Thời báo 247</a></h2>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

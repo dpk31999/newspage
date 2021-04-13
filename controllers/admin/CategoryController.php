@@ -19,7 +19,7 @@ class CategoryController extends BaseController
         {
             Category::create($_POST['name'],$_POST['slug'],date("Y-m-d H:i:s"));
 
-            header('Location: http://localhost/newspage/admin/category');
+            header('Location: '. $this->domain .'/admin/category');
         }
         
         else{
@@ -35,7 +35,7 @@ class CategoryController extends BaseController
         {
             Category::save($id,$_POST['name'],$_POST['slug']);
 
-            header('Location: http://localhost/newspage/admin/category');
+            header('Location: '. $this->domain .'/admin/category');
         }
 
         else{

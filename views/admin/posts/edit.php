@@ -1,4 +1,4 @@
-<a href="/newspage/admin/post" class="btn btn-default">
+<a href="<?=$domain?>/admin/post" class="btn btn-default">
     <span class="glyphicon glyphicon-arrow-left"></span> Trở về
 </a>
 <form method="POST" id="formEditPost" action="<?=$post->id?>" enctype="multipart/form-data">
@@ -62,7 +62,7 @@
     </div>
     <div class="form-group">
         <p><strong>Ảnh cũ</strong></p>
-        <img src="/newspage/storage/uploads/<?=$post->url_thumb?>" height="100px" width="100px" alt="">
+        <img src="<?=$domain?>/storage/uploads/<?=$post->url_thumb?>" height="100px" width="100px" alt="">
     </div>
     <div class="form-group box-pre-img hidden">
         <p><strong>Ảnh xem trước</strong></p>
