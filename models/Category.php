@@ -8,6 +8,7 @@ class Category
     public $label;
     public $url;
     public $date_created;
+    public $posts;
 
     function __construct($id_cate,$label,$url,$date_created)
     {
@@ -95,8 +96,7 @@ class Category
 
     public function posts()
     {
-        $conn = new DB();
-        $db = $conn->connect();
+        $db = DB::getInstance();
         $id_cate = $this->id_cate;
 
         $req = $db->query("SELECT * FROM posts WHERE cate_id = '$id_cate'");
@@ -105,12 +105,9 @@ class Category
             $list[] = new Post($item['id'], $item['title'],$item['descr'],$item['url_thumb'],$item['slug'],$item['body'],Category::find($item['cate_id']),Account::find($item['author_id']),$item['status'],$item['view'],$item['date_created']);
         }
 
-        return $list;
-    }
+        $this->posts = $list;
 
-    public function haha()
-    {
-        echo 'haha';
+        return $this->posts;
     }
 
     static function findBySlug($slug)

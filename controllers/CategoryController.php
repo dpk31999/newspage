@@ -6,7 +6,7 @@ class CategoryController extends BaseController
 {
     public function show()
     {
-        $category = Category::find(8);
+        $category = Category::findBySlug($_GET['p2']);
 
         $this->view('category/show',[
             'category' => $category

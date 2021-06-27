@@ -25,7 +25,7 @@
                 <tr data-id="'. $category->id_cate .'">
                     <td><input type="checkbox" name="id_cate[]" value="' . $category->id_cate .'"></td>
                     <td>' . $category->id_cate .'</td>
-                    <td><a href="edit/' . $category->id_cate .'">' . $category->label . '</a></td>
+                    <td><a href="category/edit/' . $category->id_cate .'">' . $category->label . '</a></td>
                     <td>
                         <a href="category/edit/'. $category->id_cate .'" class="btn btn-primary btn-sm">
                             <span class="glyphicon glyphicon-edit"></span>

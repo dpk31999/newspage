@@ -38,7 +38,7 @@
                     <tr>
                         <td><input type="checkbox" name="id_post[]" value="' . $post->id .'"></td>
                         <td>' . $post->id . '</td>
-                        <td style="width: 30%;"><a href="posts/edit/' . $post->id . '">' . $post->title . '</a></td>';
+                        <td style="width: 30%;"><a href="post/edit/' . $post->id .'">' . $post->title . '</a></td>';
                         if($post->status == '1')
                         {
                             echo '<td>Ẩn</td>';

@@ -36,7 +36,7 @@
                     {
                         echo '
                             <li>
-                                <a class="text-uppercase" href="category/'. $category->url .'">'. $category->label .'</a>
+                                <a class="text-uppercase" href="'. $domain .'/category/'. $category->url .'">'. $category->label .'</a>
                             </li>
                         ';
                     }
